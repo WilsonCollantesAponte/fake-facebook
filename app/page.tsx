@@ -14,7 +14,7 @@ export default function Home() {
         />
 
         <input
-          className=" mb-3 rounded-sm text-sm font-normal bg-gray-100 placeholder-gray-600"
+          className=" mb-2 rounded-sm text-sm font-normal bg-gray-100 placeholder-gray-600"
           type="text"
           placeholder="Contraseña"
           name="password"
@@ -34,32 +34,34 @@ export default function Home() {
           <hr className=" w-full border border-gray-200" />
         </div>
 
-        <button className="mt-0.5 mb-3 border border-gray-400 w-4/5 self-center py-2 text-sm font-medium rounded">
+        <button className="mt-0.5 mb-3 border border-gray-400/80 w-4/5 self-center py-2 text-sm font-medium rounded">
           Crear cuenta nueva
         </button>
 
-        <div className="bg-yellow-400 flex-grow flex items-center text-xs">
-          <div className="bg-green-600 flex-grow flex flex-col">
-            <div className="flex">
-              <div className=" bg-red-600 flex flex-col flex-grow">
+        <div className="bgX-yellow-400 flex-grow flex items-center text-xs text-gray-800">
+          <div className="bgX-green-600 w-full flex flex-col">
+            <div className="flex pb-6">
+              <div className=" bgX-red-600 flex flex-col flex-grow">
                 <span>Español</span>
                 <span>Italiano</span>
                 <span>Français (France)</span>
                 <span>العربية</span>
               </div>
 
-              <div className=" bg-blue-500 flex flex-col flex-grow">
+              <div className=" bgX-blue-500 flex flex-col flex-grow">
                 <span>English (US)</span>
                 <span>Português (Brasil)</span>
                 <span>Deutsch</span>
-                <span className="border border-gray-500 w-fit self-center px-1.5">
+                <span className="border border-gray-600 w-fit self-center px-1.5">
                   +
                 </span>
               </div>
             </div>
-            <span className=" bg-indigo-600">Información · Ayuda · Más </span>
-            <br />
-            <span className="">Meta © 2023</span>
+            <span className=" bgX-indigo-600 pb-3">
+              Información · Ayuda · Más
+            </span>
+            {/* <br /> */}
+            <span className=" bgX-emerald-300">Meta © 2023</span>
           </div>
         </div>
       </div>
