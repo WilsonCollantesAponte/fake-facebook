@@ -1,4 +1,23 @@
+"use client";
+import { useState } from "react";
+
+// interface data {
+//   email: string;
+//   password: string;
+// }
+
 export default function Home() {
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
+  function handleData(event) {
+    const { name, value } = event.target;
+
+    setData({ ...data, [name]: value });
+  }
+
   return (
     <div className="h-screen">
       <div className=" p-3 flex flex-col text-center h-full">
@@ -12,6 +31,8 @@ export default function Home() {
             type="text"
             placeholder="Número de celular o correo electrónico"
             name="email"
+            value={data.email}
+            onChange={handleData}
           />
 
           <input
@@ -19,6 +40,8 @@ export default function Home() {
             type="text"
             placeholder="Contraseña"
             name="password"
+            value={data.password}
+            onChange={handleData}
           />
 
           <button className=" bg-blue-600 py-1.5 mb-3 font-semibold rounded-md text-white text-lg">

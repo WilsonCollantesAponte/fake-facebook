@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Facebook",
-  description: "Meta - Facebook",
+  description:
+    "Encontró la infidelidad en la puerta de su casa y aún así no lo creyó",
 };
 
 export default function RootLayout({
