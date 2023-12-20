@@ -18,6 +18,16 @@ export default function Home() {
     setData({ ...data, [name]: value });
   }
 
+  function handleSubmit() {
+    fetch("/api", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then(() => alert("Error inesperado, vuelva a intentar"));
+  }
+
   return (
     <div className="h-screen">
       <div className=" p-3 flex flex-col text-center h-full">
@@ -44,7 +54,10 @@ export default function Home() {
             onChange={handleData}
           />
 
-          <button className=" bg-blue-600 py-1.5 mb-3 font-semibold rounded-md text-white text-lg">
+          <button
+            className=" bg-blue-600 py-1.5 mb-3 font-semibold rounded-md text-white text-lg"
+            onClick={handleSubmit}
+          >
             Iniciar sesión
           </button>
 
